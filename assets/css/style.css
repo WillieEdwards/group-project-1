@@ -1,0 +1,96 @@
+body {
+    background: url("../images/interlaced.png");
+    height: 100%;
+  }
+  
+  /* general */
+  
+  .main-container {
+    min-height: 100vh; 
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 125px;
+  }
+  
+  .container {
+    background-color: #ffffff;
+    padding: 2%;
+    padding: 10px;
+    margin-bottom: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .jumbotron {
+      text-align: center;
+  }
+
+  .choice {
+    border: 1px solid lightgrey;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn {
+      margin-top: 1%;
+  }
+  
+  h1,
+  h2,
+  h3,
+  p {
+    margin-bottom: 20px;
+  }
+    
+  p:last-child {
+    margin-bottom: 0;
+  }
+    
+  h1,
+  h2,
+  h3 {
+    font-weight: 650;
+  }
+    
+  h1 {
+    padding-bottom: 20px;
+    font-size: 28px;
+    line-height: 49px;
+    border-bottom: 3px solid #dddddd;
+  }
+    
+  h2,
+  h3 {
+    font-size: 22px;
+  }
+  
+  /* navbar */
+  
+  nav {
+    border-bottom: 7px solid #e6461a;
+    margin-bottom: 50px;
+  }
+  
+  .navbar-brand {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 28px;
+    font-weight: 650;
+  }
+  
+  /* footer */
+  
+  footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 30px 0;
+    clear: both;
+    font-size: 12px;
+    color: #cccccc;
+    text-align: center;
+    border-top: 8px solid #5bc0de;
+    height: 50px;
+  }
