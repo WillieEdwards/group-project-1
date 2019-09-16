@@ -64,7 +64,9 @@ function displayMovieOptions(category) {
 
         var movieDiv = $("<div class= 'movie'>");
 
-        var results = response.results;
+        // rating
+
+        var rating = response.rating;
 
         var pOne = $("<p>").text("Rating: " + results);
 
@@ -78,7 +80,6 @@ function displayMovieOptions(category) {
 
         movieDiv.append(genre);
 
-
         // poster
 
         var imgURL = response.Poster
@@ -86,8 +87,6 @@ function displayMovieOptions(category) {
         var image = $("<img>").attr("src", imgURL);
 
         movieDiv.append(image);
-
-        // rating
 
         // youtube trailer
 
