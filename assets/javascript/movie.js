@@ -18,13 +18,26 @@
 function displayMovieOptions(category) {
 
     var query;
+
+    var believerArray = [14, 878];
+
+    var dramaticArray = [18, 36, 80, 10752];
+
+    var nailBiterArray = [27, 53, 9648];
+
+    var romanticArray = [10749, 10751];
+
+    var stuntDoubleArray = [12, 28, 37];
+
+    var otherArray = [16, 10402, 10770];
+
     switch (category) {
         case "believer":
-            query = "14" + "878"
+            query = believerArray
                 // code block
             break;
         case "dramatic":
-            query = "18" + "80" + "10752"
+            query = dramaticArray
                 // code block
             break;
         case "indie":
@@ -36,31 +49,36 @@ function displayMovieOptions(category) {
                 // code block
             break;
         case "nailBiter":
-            query = "27" + "53" + "9648"
+            query = nailBiterArray
                 // code block
             break;
         case "romantic":
-            query = "10749" + "10751"
+            query = romanticArray
                 // code block
             break;
         case "stuntDouble":
-            query = "28" + "12"
+            query = stuntDoubleArray
                 // code block
             break;
 
         default:
-            query = "16" + "36" + "10402" + "10770" + "37"
+            query = otherArray
                 // code block
+
+
     }
 
+
+    console.log(query)
     var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=" + query + "&api_key=d85d81953c9f6c3511e419e5fbfad6f4";
+    console.log(queryURL);
 
     // Creating an AJAX call for the specific movie button being clicked
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-        console.log(response.results);
+        console.log('ajax response', response.results);
 
         var movieDiv = $("<div class= 'movie'>");
 
@@ -89,7 +107,6 @@ function displayMovieOptions(category) {
         movieDiv.append(image);
 
         // youtube trailer
-
 
     });
 
