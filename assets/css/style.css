@@ -1,20 +1,3 @@
-.nav-wrapper{
-  font-family: 'Righteous', cursive;
-  background-color: #fac92c;
-  text-shadow: 2px 2px 4px #000000;
-}
-
-a.waves-effect.waves-light.btn-small{
-  background-color: #f78f2b;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 20%;
-}
-
-
-
-
 
 .mainContent{
   margin: auto;
