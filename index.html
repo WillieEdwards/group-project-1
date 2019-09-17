@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
@@ -17,52 +18,175 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-          
 
-    
-  
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">Film Fetch</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
-      </nav>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Film Fetch</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
 
 
-      <div class ="mainContent">
+  <div class="mainContent">
 
-        <p>Get Started</p>
-        <a class="waves-effect waves-light btn-small">Begin</a>
+    <p>Get Started</p>
+    <a class="waves-effect waves-light btn-small">Begin</a>
 
-       </div>
+  </div>
 
-      <div class="personalityTest">
-        <p>Personality Test</p>
-        <a class="waves-effect waves-light btn-small">Results</a>
-      </div>
+  <div class="personalityTest">
+    <p>Personality Test</p>
 
-      <div class ="movieSuggestions">
-        <p>See Movie Suggestions</p>
-        <a class="waves-effect waves-light btn-small">Suggestions</a>
-      </div>
-   
-      
-      <div class="movieOptions">
-        <p>Top Picks for You </p>
-</div>
-      
+    <h1>What is your movie mood? Take this quiz to find out!</h1>
+
+    <form id="personalityQuiz">
+
+      <h3>Pick a flower</h3>
+      <p><label><input type="radio" name="flower" value=""><span>Answer</span></label></p>
+
+      <input type="radio" name="flower" value="dramatic">Answer<br>
+
+      <input type="radio" name="flower" value="indie">Answer<br>
+
+      <input type="radio" name="flower" value="laughaholic">Answer<br>
+
+      <input type="radio" name="flower" value="nailBiter">Answer<br>
+
+      <input type="radio" name="flower" value="romantic">Answer<br>
+
+      <input type="radio" name="flower" value="stuntDouble">Answer<br>
+
+      <input type="radio" name="flower" value="other">Answer<br>
+
+      <br>
+
+      <h3>Pick a landscape</h3>
+      <p><label><input type="radio" name="landscape" value="believer"><span>
+      <img src="assets/images/landscape/violet-landscape.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="landscape" value="dramatic"><span>
+      <img src="assets/images/landscape/green-landscape.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="landscape" value="indie"><span>
+      <img src="assets/images/landscape/brown-landscape.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="landscape" value="laughaholic"><span>
+      <img src="assets/images/landscape/blue-landscape.jpeg" alt=""></span></label></p>
+
+      <input type="radio" name="landscape" value="nailBiter">
+      <img src="assets/images/landscape/black-landscape.jpeg" alt=""><br>
+
+      <input type="radio" name="landscape" value="romantic">
+      <img src="assets/images/landscape/red-landscape.jpeg" alt=""><br>
+
+      <input type="radio" name="landscape" value="stuntDouble">
+      <img src="assets/images/landscape/yellow-landscape.jpeg" alt=""><br>
+
+      <input type="radio" name="landscape" value="other">
+      <img src="assets/images/landscape/grey-landscape.jpeg" alt=""><br>
+
+      <br>
+
+      <h3>Pick an animal</h3>
+      <input type="radio" name="animal" value="believer">Answer<br>
+
+      <input type="radio" name="animal" value="dramatic">Answer<br>
+
+      <input type="radio" name="animal" value="indie">Answer<br>
+
+      <input type="radio" name="animal" value="laughaholic">Answer<br>
+
+      <input type="radio" name="animal" value="nailBiter">Answer<br>
+
+      <input type="radio" name="animal" value="romantic">Answer<br>
+
+      <input type="radio" name="animal" value="stuntDouble">Answer<br>
+
+      <input type="radio" name="animal" value="other">Answer<br>
+
+      <br>
+
+      <h3>Pick a pattern</h3>
+      <input type="radio" name="pattern" value="believer">Answer<br>
+
+      <input type="radio" name="pattern" value="dramatic">Answer<br>
+
+      <input type="radio" name="pattern" value="indie">Answer<br>
+
+      <input type="radio" name="pattern" value="laughaholic">Answer<br>
+
+      <input type="radio" name="pattern" value="nailBiter">Answer<br>
+
+      <input type="radio" name="pattern" value="romantic">Answer<br>
+
+      <input type="radio" name="pattern" value="stuntDouble">Answer<br>
+
+      <input type="radio" name="pattern" value="other">Answer<br>
+
+      <br>
+
+      <h3>Pick a car</h3>
+      <input type="radio" name="car" value="believer">Answer<br>
+
+      <input type="radio" name="car" value="dramatic">Answer<br>
+
+      <input type="radio" name="car" value="indie">Answer<br>
+
+      <input type="radio" name="car" value="laughaholic">Answer<br>
+
+      <input type="radio" name="car" value="nailBiter">Answer<br>
+
+      <input type="radio" name="car" value="romantic">Answer<br>
+
+      <input type="radio" name="car" value="stuntDouble">Answer<br>
+
+      <input type="radio" name="car" value="other">Answer<br>
+
+      <br>
+
+      <a class="waves-effect waves-light btn-small"><input type="submit" value="GO FETCH!"></a>
+
+    </form>
+
+    Results
+  </div>
+
+  <div class="movieSuggestions">
+    <p>See Movie Suggestions</p>
+    <a class="waves-effect waves-light btn-small">Suggestions</a>
+  </div>
+
+
+  <div class="movieOptions">
+    <p>Top Picks for You </p>
+  </div>
+
+
+  <form action="">
+
+    <input type="radio" name="test" id="test2">
+  </form>
 
 
 
-      <footer>
 
-      </footer>
 
-  
+  <footer>
+
+  </footer>
+
+  <script src="assets/javascript/app.js"></script>
+
+
 </body>
 
 </html>
