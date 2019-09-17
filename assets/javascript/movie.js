@@ -3,8 +3,6 @@ var query;
 
 function displayMovieOptions(category) {
 
-
-
     var believerArray = [14, 878];
 
     var dramaticArray = [18, 36, 80, 10752];
@@ -202,11 +200,11 @@ function getMovieOptions() {
         movieDiv.append(image);
 
         // youtube trailer
+
+        // movie title array for youtube
     })
 }
-
-
-// movie title array for youtube
+resultsTitleArray();
 
 displayMovieOptions();
 
