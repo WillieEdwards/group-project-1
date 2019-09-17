@@ -8,3 +8,67 @@
   border: 10px;
   border-color: black;
 }
+.nav-wrapper{
+  font-family: 'Righteous', cursive;
+  background-color: #fac92c;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+a.waves-effect.waves-light.btn-small{
+  background-color: #f78f2b;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+
+
+
+
+.mainContent{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+  
+}
+
+.personalityTest{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+}
+
+.movieSuggestions{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+}
+.movieOptions{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+}
+
+
+
+
+
+h1{
+  text-align: center;
+}
+
+body {margin: 0;}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+}
+
+
