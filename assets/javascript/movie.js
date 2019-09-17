@@ -1,4 +1,5 @@
 // MOVIE PERSONALITY TYPES
+
 var query;
 
 function displayMovieOptions(category) {
@@ -68,12 +69,12 @@ function getMovieOptions() {
         url: queryURL,
         method: "GET"
     }).then(function(response) {
+
         console.log('ajax response', response);
 
         var type;
 
         for (let i = 0; i < response.results[0].genre_ids.length; i++) {
-
 
             switch (response.results[0].genre_ids[i]) {
                 case 28:
