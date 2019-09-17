@@ -1,11 +1,42 @@
+.nav-wrapper{
+  font-family: 'Righteous', cursive;
+  background-color: #fac92c;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+a.waves-effect.waves-light.btn-small{
+  background-color: #f78f2b;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+
+
+
 
 .mainContent{
   margin: auto;
   width: 50%;
   padding: 10px;
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+  
 }
 
+.personalityTest{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+}
+
+.movieSuggestions{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
+}
 .movieOptions{
   margin: auto;
   width: 50%;
@@ -13,40 +44,21 @@
   box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.03);
 }
 
-body {margin: 0;}
+
+
+
 
 h1{
   text-align: center;
-
 }
 
-ul.topnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+body {margin: 0;}
 
-ul.topnav li {float: left;}
 
-ul.topnav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
 
-ul.topnav li a:hover:not(.active) {background-color: #111;}
-
-ul.topnav li a.active {background-color: black;}
-
-ul.topnav li.right {float: right;}
 
 @media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
+
 }
 
 
