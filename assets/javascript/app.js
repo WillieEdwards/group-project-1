@@ -1,35 +1,20 @@
-$("#personalityQuiz").submit(function(event){
+//grab the value the user wants to search for using jquery and save it into a variable
+//concatinate the value into a query string
+//make the request to get the data
+//then once response recieved, grab iframe code from youtube, click share then embed
+//concatinate the video id into the end of the embed string into the source
 
-    event.preventDefault();
+// var searchTerm = $("#myInput").val();
+var title = "Texas Chainsaw Massacre"
+var searchTerm = title+ " movie trailer"
 
-    var answers = $(this).serializeArray();
+var queryString = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + searchTerm + "&key=AIzaSyCYNVpx7UIKb2oZrtIxOtRKZEdGuq3CNnE";
 
-    var scores = {
-        believer: 0,
-        dramatic: 0,
-        indie: 0,
-        laughaholic: 0,
-        nailBiter: 0,
-        romantic: 0,
-        stuntDouble: 0,
-        other: 0,
-    }
+$.get(queryString).then(function(response) {
 
-    for(var answer of answers){
-        scores[answer.value] += 1;
-    }
+    
+    $("#myVideoElement").append(`<iframe width="560" height="315" src="https://www.youtube.com/embed/${response.items[0].id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
+    console.log(response.items[0].id.videoId);
+    
 
-    // console.log(scores);
-
-    var maxGenre = "believer";
-
-    for(var genre in scores){
-        // console.log(scores[genre]);
-        if(scores[genre] > scores[maxGenre]){
-            maxGenre = genre;
-        }
-    }
-
-    $("#personalityQuiz").css("display", "none");
-    $(".result#"+maxGenre).css("display", "block");
 });

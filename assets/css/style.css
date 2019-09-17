@@ -1,3 +1,13 @@
+#myVideoElement {
+  background: rgb(255, 230, 0)
+  text-align: center;
+  padding: 10px;
+  border-radius: 5rem;
+  margin-right: 200px;
+  margin-left: 200px;
+  border: 10px;
+  border-color: black;
+}
 .nav-wrapper{
   font-family: 'Righteous', cursive;
   background-color: #fac92c;
