@@ -175,15 +175,15 @@ function getMovieOptions() {
               </div>
             </div>`);
 
-            videoCard.attr('class', 'col s12 m7');
+            // videoCard.attr('class', 'col s12 m7');
 
             // poster
 
             // console.log(title);
 
-            var movieTitleDiv = $("<h5>").attr('class', 'header').text("Title: " + title);
+            // var movieTitleDiv = $("<h5>").attr('class', 'header').text("Title: " + title);
 
-            videoCard.append(movieTitleDiv);
+            // videoCard.append(movieTitleDiv);
 
             // rating
 
@@ -191,35 +191,35 @@ function getMovieOptions() {
 
             // console.log(rating);
 
-            var pTwo = $("<p>").text("Vote Average: " + rating + "/10");
+            // var pTwo = $("<p>").text("Vote Average: " + rating + "/10");
 
-            videoCard.append(pTwo);
+            // videoCard.append(pTwo);
 
             // genre
 
-            var genre = response.results[0].genre_ids;
+            // var genre = response.results[0].genre_ids;
 
             // console.log(genre);
 
-            var pThree = $("<p>").text("Genre: " + genre);
+            // var pThree = $("<p>").text("Genre: " + genre);
 
-            videoCard.append(pThree);
+            // videoCard.append(pThree);
 
 
 
             // console.log(imgURL);
 
-            var image = $("<img>").attr("src", imgURL);
+            // var image = $("<img>").attr("src", imgURL);
 
-            videoCard.append(image);
+            // videoCard.append(image);
 
-            var movieOptionsDiv = $('.movieOptions')
-                // console.log('movieOptionsDiv', movieOptionsDiv)
+            // var movieOptionsDiv = $('.movieOptions')
+            // console.log('movieOptionsDiv', movieOptionsDiv)
 
-            movieOptionsDiv.append(videoCard)
-                // movieDiv.append(image);
-                // renderCard();
-                // youtube trailer
+            // movieOptionsDiv.append(videoCard)
+            // movieDiv.append(image);
+            // renderCard();
+            // youtube trailer
 
             // movie title array for youtube
 
@@ -245,11 +245,11 @@ function getMovieOptions() {
             // function renderCard() {
 
             // for (let i = 0; i < resultsTitleArray.length; i++) {
-            console.log("loop trigger")
+            // console.log("loop trigger")
 
             // movieTitleDiv.text(pOne);
 
-            videoCard.append(movieTitleDiv);
+            // videoCard.append(movieTitleDiv);
 
             // pTwo.text(videoCard);
             // pThree.text(videoCard);
