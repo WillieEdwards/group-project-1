@@ -9,59 +9,320 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Film Fetch</title>
 
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
-
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Film Fetch</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="about.html">About</a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">Film Fetch</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
 
 
+    
     <div class="mainContent">
-
-        <p>Get Started</p>
-        <a class="waves-effect waves-light btn-small">Begin</a>
-
+        <div id = "h1" ><h1>Let's Get Started</h1></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <button id = "start">START</button>
     </div>
 
     <div class="personalityTest">
         <p>Personality Test</p>
-        <a class="waves-effect waves-light btn-small">Results</a>
+        <button id= "result">Results</button>
     </div>
 
     <div class="movieGenre">
+        <p>See Movie Genre</p>
+        <button id="suggest">Top Picks</button>
+    </div>
+
+
+  <div class="mainContent">
+
+    <p>Get Started</p>
+    <a class="waves-effect waves-light btn-small">Begin</a>
+
+  </div>
+
+  <div class="personalityTest">
+    
+    <form id="personalityQuiz">
+      
+      <h4>In the mood for a movie?</h4>
+
+      <h6>Choose a color:</h6>
+
+      <p><label><input type="radio" name="color" value="believer"><span>
+            <img src="assets/images/color/violet.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="color" value="dramatic"><span>
+            <img src="assets/images/color/green.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="color" value="indie"><span>
+            <img src="assets/images/color/brown.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="color" value="laughaholic"><span>
+            <img src="assets/images/color/blue.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="color" value="nailBiter"><span>
+            <img src="assets/images/color/black.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="color" value="romantic"><span>
+            <img src="assets/images/color/red.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="color" value="stuntDouble"><span>
+            <img src="assets/images/color/yellow.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="color" value="other"><span>
+            <img src="assets/images/color/grey.jpeg" alt=""></span></label></p>
+
+      <h6>Choose an animal:</h6>
+
+      <p><label><input type="radio" name="animal" value="believer"><span>
+            <img src="assets/images/animal/owl.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="animal" value="dramatic"><span>
+            <img src="assets/images/animal/cat.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="animal" value="indie"><span>
+            <img src="assets/images/animal/beaver.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="animal" value="laughaholic"><span>
+            <img src="assets/images/animal/dolphin.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="animal" value="nailBiter"><span>
+            <img src="assets/images/animal/rat.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="animal" value="romantic"><span>
+            <img src="assets/images/animal/dog.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="animal" value="stuntDouble"><span>
+            <img src="assets/images/animal/eagle.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="animal" value="other"><span>
+            <img src="assets/images/animal/hippo.jpg" alt=""></span></label></p>
+
+      <h6>Choose a building:</h6>
+
+      <p><label><input type="radio" name="building" value="believer"><span>
+            <img src="assets/images/building/space-needle.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="building" value="dramatic"><span>
+            <img src="assets/images/building/willis-tower.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="building" value="indie"><span>
+            <img src="assets/images/building/big-ben.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="building" value="laughaholic"><span>
+            <img src="assets/images/building/st-basils.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="building" value="nailBiter"><span>
+            <img src="assets/images/building/cathedral.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="building" value="romantic"><span>
+            <img src="assets/images/building/eiffel-tower.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="building" value="stuntDouble"><span>
+            <img src="assets/images/building/twin-towers.jpg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="building" value="other"><span>
+            <img src="assets/images/building/leaning-tower.jpeg" alt=""></span></label></p>
+
+      <h6>Choose a painting:</h6>
+
+      <p><label><input type="radio" name="painting" value="believer"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="painting" value="dramatic"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="painting" value="indie"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="painting" value="laughaholic"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="painting" value="nailBiter"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+
+      <p><label><input type="radio" name="painting" value="romantic"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="painting" value="stuntDouble"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="painting" value="other"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <h6>Choose a flower:</h6>
+
+      <p><label><input type="radio" name="flower" value="believer"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="flower" value="dramatic"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="flower" value="indie"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="flower" value="laughaholic"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="flower" value="nailBiter"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="flower" value="romantic"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="flower" value="stuntDouble"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+      <p><label><input type="radio" name="flower" value="other"><span>
+            <img src="assets/images/painting/the-scream.jpeg" alt=""></span></label></p>
+
+
+      <a type="submit" class="waves-effect waves-light btn-small"><input type="submit" value="GO FETCH!"></a>
+
+
+      <a class="waves-effect waves-light btn-small"><input type="submit" value="GO FETCH!"></a>
+
+
+    </form>
+
+    <div class="result" id="believer">
+      <h3>Believer</h3>
+      <img src="assets/images/results/believer.png" alt="Believer">
+      <p>Believers are ready for an escape into another world. Or time. Or dimension. Luckily, Fantasy and Science
+        Fiction movies are chock-full of all of these options! With imaginative and light-hearted spirits, they are
+        ready to devote themselves to a fantastical story and totally let go of the harsh realities of today's world.
+        Believers should grab a magic wand, hop onto a spacecraft or drop into a wormhole--their movies are waiting for
+        them!</p>
+    </div>
+
+<<<<<<< HEAD
+    <div class="movieGenre">
         <p>See Movie Suggestions</p>
         <a class="waves-effect waves-light btn-small">Suggestions</a>
+=======
+    <div class="result" id="dramatic">
+      <h3>Dramatic</h3>
+      <img src="assets/images/results/dramatic.png" alt="Dramatic">
+      <p>Dramatics are natural people watchers and people who enjoys realistic situations for entertainment. They like
+        to empathize and relate with the characters they're watching, which also makes them great friends in their day
+        to day lives. Dramatics should call someone special in to them and make a plan to check out the latest
+        plot-driven drama feature. They could make a night of it! Nothing is a better follow-up to a movie than some pie
+        and great conversation!</p>
+>>>>>>> a03c02f578fda2549e342e5194a5bd74ef7ee2ee
     </div>
 
-
-    <div class="movieOptions">
-        <p>Top Picks for You </p>
+    <div class="result" id="indie">
+      <h3>Indie</h3>
+      <img src="assets/images/results/indie.png" alt="Indie">
+      <p>Independent filmmaking is alive and well thanks to outside the box thinkers like these movie-goers! Indies
+        appreciate getting the chance to see the full artistic vision of the director without major studios being
+        involved and leaving meaningful scenes on the cutting room floor. Being the artistic type, it intrigues Indies
+        to see what people can do using a 'more with less' approach to their filming. There are countless movies of this
+        caliber available. Indies can swing by their local theaters, support the independent film industry, and
+        experience art in motion!</p>
     </div>
 
+    <div class="result" id="laughaholic">
+      <h3>Laughaholic</h3>
+      <img src="assets/images/results/laughaholic.png" alt="Laughaholic">
+      <p>Laughaholics want their entertainment and want it now! "Surely, you can't be serious?" they might say. Well,
+        they are serious, and don't call them Shirley. It appears that they're in the mood to laugh and see something
+        relatively easy and fun. Now it's just a matter of deciding what kind of comedy they want to see. Laughaholics
+        should try one of these suggestions, then call everyone for an awesome LOL experience!</p>
+    </div>
+
+    <div class="result" id="nailBiter">
+      <h3>You are a Nail Biter</h3>
+      <img src="assets/images/results/nailBiter.png" alt="Nail Biter">
+      <p>Nail Biters are in need of a cinematic thriller tonight--something only demons, zombies, axe-murderers,
+        psychos, beasts, blood, guts, and terror can offer! A horror movie will be perfect for tonight and is one of the
+        most enjoyable theatre experiences. When it's a packed house, these movie-goers and everyone in the audience
+        scream, gasp, and laugh as one. Time for Nail Biters to make plans to see the latest thriller and get scared out
+        of their seats!</p>
+    </div>
+
+    <div class="result" id="romantic">
+      <h3>You are Romantic</h3>
+      <img src="assets/images/results/romantic.png" alt="Romantic">
+      <p>Romantics have whimsical minds and a full hearts. Cinema regularly touches on relationships, love, and loss
+        because it's something all can relate to and pulls on the Romantics' heartstrings the hardest. Every now and
+        then, these movie-goers need to be reminded of how it feels to act with their hearts. Even if for those who
+        believe they aren't saps, there's a hopeless romantic in all of them that dreams of a dance in the moonlight
+        with their soulmate. Whether it be a "You had me at hello" or a "Here's lookin' at you, kid," Romantics are in
+        the mood for love, and it's out there waiting for them.</p>
+    </div>
+
+    <div class="result" id="stuntDouble">
+      <h3>You are a Stunt Double</h3>
+      <img src="assets/images/results/stuntDouble.png" alt="Stunt Double">
+      <p>Oh, Stunt Doubles are ready for an adrenaline rush! It's time for them to catch an action-packed, explosive,
+        big-budget film to satisfy their high energy! With the resurgence of superhero movies and fantasy epics, there's
+        never a shortage of great battles, heroes, villains, amazing sets, and unbelievable, fast-paced storylines.
+        Stunt Doubles should assemble their teams and get fired up to see the hottest action film going!</p>
+    </div>
+
+    <div class="result" id="other">
+      <h3>Other</h3>
+      <img src="assets/images/results/other.png" alt="Other">
+      <p>You're just weird...</p>
+    </div>
+
+  </div>
+
+  <div class="movieSuggestions">
+    <p>See Movie Suggestions</p>
+    <a class="waves-effect waves-light btn-small">Suggestions</a>
+  </div>
 
 
+  <div class="movieOptions">
+    <p>Top Picks for You </p>
+  </div>
+  
+  
 
-    <footer>
+  <footer>
 
-    </footer>
+  </footer>
+
+  <script src="assets/javascript/style.js"></script>
+  <script src="assets/javascript/question.js"></script>
+  <script src="assets/javascript/movie.js"></script>
+  <script src="assets/javascript/app.js"></script>
 
     <script src="assets/javascript/movie.js"></script>
     <script src="assets/javascript/app.js"></script>
