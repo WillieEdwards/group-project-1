@@ -199,12 +199,14 @@ function getMovieOptions() {
         var image = $("<img>").attr("src", imgURL);
 
         movieDiv.append(image);
+        // movieDiv.append(image);
 
         // youtube trailer
 
         // movie title array for youtube
 
         // create cards that click handler will get attached too
+
 
 
         // function renderButtons() {
