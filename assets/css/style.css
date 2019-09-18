@@ -29,7 +29,9 @@ body{
   
 }
 
-
+.result {
+  display: none;
+}
 
 
 .mainContent{
