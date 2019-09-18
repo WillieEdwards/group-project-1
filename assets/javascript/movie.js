@@ -53,6 +53,7 @@ function displayMovieOptions(category) {
     };
     console.log("query", query)
     getMovieOptions()
+    return query;
 }
 
 
@@ -154,6 +155,7 @@ function getMovieOptions() {
 
             }
             console.log("type", type);
+            return type;
         };
 
         // title
@@ -162,7 +164,7 @@ function getMovieOptions() {
 
         var title = response.results[0].title;
 
-        console.log(title);
+        // console.log(title);
 
         var pOne = $("<p>").text("Title: " + title);
 
@@ -174,7 +176,7 @@ function getMovieOptions() {
 
         var rating = response.results[0].vote_average;
 
-        console.log(rating);
+        // console.log(rating);
 
         var pTwo = $("<p>").text("Vote Average: " + rating + "/10");
 
@@ -184,7 +186,7 @@ function getMovieOptions() {
 
         var genre = response.results[0].genre_ids;
 
-        console.log(genre);
+        // console.log(genre);
 
         var pThree = $("<p>").text("Genre: " + genre);
 
@@ -194,7 +196,7 @@ function getMovieOptions() {
 
         var imgURL = response.results[0].poster_path;
 
-        console.log(imgURL);
+        // console.log(imgURL);
 
         var image = $("<img>").attr("src", imgURL);
 
