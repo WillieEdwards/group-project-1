@@ -61,23 +61,20 @@ function getMovieOptions() {
 
     var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=" + query + "&api_key=d85d81953c9f6c3511e419e5fbfad6f4";
 
-    console.log("url", queryURL);
-
-    var resultsTitleArray = [];
+    // console.log("url", queryURL);
 
     // Creating an AJAX call for the specific movie button being clicked
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
-
+        $('.movieOptions').empty();
         console.log('ajax response', response);
+        for (let i = 0; i < response.results.length; i++) {
+            var type
+            var title = response.results[i].title;
 
-        var type;
-
-        for (let i = 0; i < response.results[0].genre_ids.length; i++) {
-
-            switch (response.results[0].genre_ids[i]) {
+            switch (response.results[i].genre_ids[0]) {
                 case 28:
                     type = "Action"
                         // code block
@@ -155,89 +152,122 @@ function getMovieOptions() {
 
             }
             console.log("type", type);
-            return type;
-        };
+            // console.log('array', resultsTitleArray)
 
-        // title
+            var rating = response.results[0].vote_average;
+            var imgURL = response.results[0].poster_path;
 
-        var movieDiv = $("<div class= 'movie'>");
+            var videoCard = $(`<div class="col s12 m7">
+            <div class="card horizontal">
+              <div class="card-image">
+                  <img src="${imgURL}">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                  <p>Titile: ${title}</p>
+                  <p>Rating: ${rating}</p>
+                  <p>Genre: ${type}</p>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="grabMovieTrailer">Watch Movie Trailer</a>
+                </div>
+              </div>
+              </div>
+            </div>`);
 
-        var title = response.results[0].title;
+            videoCard.attr('class', 'col s12 m7');
 
-        // console.log(title);
+            // poster
 
-        var pOne = $("<p>").text("Title: " + title);
+            // console.log(title);
 
-        movieDiv.append(pOne);
+            var movieTitleDiv = $("<h5>").attr('class', 'header').text("Title: " + title);
 
-        resultsTitleArray.append(pOne);
+            videoCard.append(movieTitleDiv);
 
-        // rating
-
-        var rating = response.results[0].vote_average;
-
-        // console.log(rating);
-
-        var pTwo = $("<p>").text("Vote Average: " + rating + "/10");
-
-        movieDiv.append(pTwo);
-
-        // genre
-
-        var genre = response.results[0].genre_ids;
-
-        // console.log(genre);
-
-        var pThree = $("<p>").text("Genre: " + genre);
-
-        movieDiv.append(pThree);
-
-        // poster
-
-        var imgURL = response.results[0].poster_path;
-
-        // console.log(imgURL);
-
-        var image = $("<img>").attr("src", imgURL);
-
-        movieDiv.append(image);
-        // movieDiv.append(image);
-
-        // youtube trailer
-
-        // movie title array for youtube
-
-        // create cards that click handler will get attached too
+            // rating
 
 
 
-        // function renderButtons() {
-        //     $("#buttons-display").empty();
-        //     for (var i = 0; i < moods.length; i++) {
-        //         var newMood = $("<button>")
-        //             .addClass("mood")
-        //             .attr("data-mood", moods[i])
-        //             .text(moods[i]);
-        //         $("#buttons-display").append(newMood);
-        //     }
-        // }
-        // $("#mood-button").on("click", function(event) {
-        //     event.preventDefault();
-        //     var newMood = $("#mood-input").val().trim();
-        //     console.log(newMood);
-        //     moods.push(newMood);
-        //     renderButtons();
-        // });
-        // renderButtons();
-        // $(document).on("click", ".addVideo", function(event) {
-        //     event.preventDefault();
+            // console.log(rating);
 
-        // });
+            var pTwo = $("<p>").text("Vote Average: " + rating + "/10");
+
+            videoCard.append(pTwo);
+
+            // genre
+
+            var genre = response.results[0].genre_ids;
+
+            // console.log(genre);
+
+            var pThree = $("<p>").text("Genre: " + genre);
+
+            videoCard.append(pThree);
+
+
+
+            // console.log(imgURL);
+
+            var image = $("<img>").attr("src", imgURL);
+
+            videoCard.append(image);
+
+            var movieOptionsDiv = $('.movieOptions')
+                // console.log('movieOptionsDiv', movieOptionsDiv)
+
+            movieOptionsDiv.append(videoCard)
+                // movieDiv.append(image);
+                // renderCard();
+                // youtube trailer
+
+            // movie title array for youtube
+
+            // create cards that click handler will get attached too
+
+            //     <div class="col s12 m7">
+            //     <h2 class="header">Horizontal Card</h2>
+            //     <div class="card horizontal">
+            //       <div class="card-image">
+            //         <img src="https://lorempixel.com/100/190/nature/6">
+            //       </div>
+            //       <div class="card-stacked">
+            //         <div class="card-content">
+            //           <p>I am a very simple card. I am good at containing small bits of information.</p>
+            //         </div>
+            //         <div class="card-action">
+            //           <a href="#">This is a link</a>
+            //         </div>
+            //       </div>
+            //     </div>
+            //   </div>
+
+            // function renderCard() {
+
+            // for (let i = 0; i < resultsTitleArray.length; i++) {
+            console.log("loop trigger")
+
+            // movieTitleDiv.text(pOne);
+
+            videoCard.append(movieTitleDiv);
+
+            // pTwo.text(videoCard);
+            // pThree.text(videoCard);
+            console.log(videoCard)
+            console.log($(".movieOptions"))
+            $(".movieOptions").prepend(videoCard);
+            $(".movieOptions").show();
+            // }
+            // }
+        }
+
     })
 }
-resultsTitleArray();
 
-displayMovieOptions();
+
+// resultsTitleArray();
+
+// displayMovieOptions();
 
 
 // https://api.themoviedb.org/3/movie/550?api_key=d85d81953c9f6c3511e419e5fbfad6f4
