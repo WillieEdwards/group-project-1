@@ -1,34 +1,34 @@
 $(document).ready(function(){
   $(".personalityTest").hide();
-  $(".movieGenre").hide();
   $(".movieOptions").hide();
+  $(".myVideoElement").hide();
+  $(".aboutUs").hide();
 
   
   $("#start").click(function(){
   $(".personalityTest").show();
   $(".mainContent").hide();
-  $(".movieGenre").hide();
+  $(".myVideoElement").hide();
   $(".movieOptions").hide();
+  $(".aboutUs").hide();
   
   })
   
-  $("#result").click(function(){
-  $(".movieGenre").show();
+  $("#res").click(function(){
   $(".mainContent").hide();
-  $(".personalityTest").hide();
-  $(".movieOptions").hide();
-
-})
-
-$("#suggest").click(function(){
-  $(".movieGenre").hide();
-  $(".mainContent").hide();
-  $(".personalityTest").hide();
   $(".movieOptions").show();
+  $(".aboutUs").hide();
+  $(".myVideoElement").show();
 
 })
 
+$("a").click(function(){
+  $(".mainContent").hide();
+  $(".movieOptions").hide();
+  $(".aboutUs").show();
+  $(".myVideoElement").hide();
 
+})
 
   
   });
