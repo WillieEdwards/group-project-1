@@ -1,4 +1,4 @@
-$("#personalityQuiz").submit(function(event){
+$("#personalityQuiz").submit(function (event) {
 
     event.preventDefault();
 
@@ -15,21 +15,23 @@ $("#personalityQuiz").submit(function(event){
         other: 0,
     }
 
-    for(var answer of answers){
+    for (var answer of answers) {
         scores[answer.value] += 1;
     }
 
-    // console.log(scores);
+    console.log("scores", scores);
 
-    var maxGenre = "believer";
+    // displayMovieOptions(scores); 
 
-    for(var genre in scores){
-        // console.log(scores[genre]);
-        if(scores[genre] > scores[maxGenre]){
-            maxGenre = genre;
-        }
-    }
+    var maxGenre = Object.keys(scores).reduce(function (a, b) { 
+        return scores[a] > scores[b] ? a : b 
+    })
+
+    console.log(maxGenre);
 
     $("#personalityQuiz").css("display", "none");
-    $(".result#"+maxGenre).css("display", "block");
+    $(".result#" + maxGenre).css("display", "block");
+
+    displayMovieOptions(maxGenre);
+    
 });
