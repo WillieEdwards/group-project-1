@@ -203,90 +203,37 @@ function getMovieOptions() {
         // youtube trailer
 
         // movie title array for youtube
+
+        // create cards that click handler will get attached too
+
+
+        // function renderButtons() {
+        //     $("#buttons-display").empty();
+        //     for (var i = 0; i < moods.length; i++) {
+        //         var newMood = $("<button>")
+        //             .addClass("mood")
+        //             .attr("data-mood", moods[i])
+        //             .text(moods[i]);
+        //         $("#buttons-display").append(newMood);
+        //     }
+        // }
+        // $("#mood-button").on("click", function(event) {
+        //     event.preventDefault();
+        //     var newMood = $("#mood-input").val().trim();
+        //     console.log(newMood);
+        //     moods.push(newMood);
+        //     renderButtons();
+        // });
+        // renderButtons();
+        // $(document).on("click", ".addVideo", function(event) {
+        //     event.preventDefault();
+
+        // });
     })
 }
 resultsTitleArray();
 
 displayMovieOptions();
 
+
 // https://api.themoviedb.org/3/movie/550?api_key=d85d81953c9f6c3511e419e5fbfad6f4
-// {
-//     "genres": [
-//       {
-//         "id": 28,
-//         "name": "Action"
-//       },
-//       {
-//         "id": 12,
-//         "name": "Adventure"
-//       },
-//       {
-//         "id": 16,
-//         "name": "Animation"
-//       },
-//       {
-//         "id": 35,
-//         "name": "Comedy"
-//       },
-//       {
-//         "id": 80,
-//         "name": "Crime"
-//       },
-//       {
-//         "id": 99,
-//         "name": "Documentary"
-//       },
-//       {
-//         "id": 18,
-//         "name": "Drama"
-//       },
-//       {
-//         "id": 10751,
-//         "name": "Family"
-//       },
-//       {
-//         "id": 14,
-//         "name": "Fantasy"
-//       },
-//       {
-//         "id": 36,
-//         "name": "History"
-//       },
-//       {
-//         "id": 27,
-//         "name": "Horror"
-//       },
-//       {
-//         "id": 10402,
-//         "name": "Music"
-//       },
-//       {
-//         "id": 9648,
-//         "name": "Mystery"
-//       },
-//       {
-//         "id": 10749,
-//         "name": "Romance"
-//       },
-//       {
-//         "id": 878,
-//         "name": "Science Fiction"
-//       },
-//       {
-//         "id": 10770,
-//         "name": "TV Movie"
-//       },
-//       {
-//         "id": 53,
-//         "name": "Thriller"
-//       },
-//       {
-//         "id": 10752,
-//         "name": "War"
-//       },
-//       {
-//         "id": 37,
-//         "name": "Western"
-//       }
-//     ]
-//   }
