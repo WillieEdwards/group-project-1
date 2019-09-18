@@ -5,16 +5,25 @@
 //concatinate the video id into the end of the embed string into the source
 
 // var searchTerm = $("#myInput").val();
-var title = "Texas Chainsaw Massacre"
-var searchTerm = title+ " movie trailer"
 
-var queryString = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + searchTerm + "&key=AIzaSyCYNVpx7UIKb2oZrtIxOtRKZEdGuq3CNnE";
+(document).ready(function (renderCards) {
 
-$.get(queryString).then(function(response) {
-
-    
-    $("#myVideoElement").append(`<iframe width="560" height="315" src="https://www.youtube.com/embed/${response.items[0].id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
-    console.log(response.items[0].id.videoId);
-    
-
+    $('div').on('click', function () {
+        var movieName = $(this).data('name');
+        
+        
+        var trailerTitle = "Texas Chainsaw Massacre"
+        var searchTerm = trailerTitle+ " movie trailer"
+        
+        var queryString = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + searchTerm + "&key=AIzaSyCYNVpx7UIKb2oZrtIxOtRKZEdGuq3CNnE";
+        
+        $.get(queryString).then(function(response) {
+            
+            
+            $("#myVideoElement").append(`<iframe width="560" height="315" src="https://www.youtube.com/embed/${response.items[0].id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
+            console.log(response.items[0].id.videoId);
+            
+            
+        });
+    });
 });
