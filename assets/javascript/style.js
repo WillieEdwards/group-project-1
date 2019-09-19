@@ -22,13 +22,7 @@ $(document).ready(function(){
 
 })
 
-$("a").click(function(){
-  $(".mainContent").hide();
-  $(".movieOptions").hide();
-  $(".aboutUs").show();
-  $(".myVideoElement").hide();
 
-})
 
   
   });

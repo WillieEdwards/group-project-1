@@ -1,7 +1,4 @@
 
-#text1, #text2, #text3, #text4{
-  color:white;
-}
 
 
 
@@ -14,7 +11,7 @@
 
 
  
-#start,#res,#suggest{
+#start,#suggest{
   font-family: 'Darker Grotesque', sans-serif;
   background-color:#fac92c;
   border: none;
@@ -28,13 +25,27 @@
   border-radius: 20px;
   box-shadow: 3px 4px 5px black;
   display: block;
-  margin-left: 627px;
+  margin-left: auto;
   margin-right: auto;
   margin-top: -99px;
   position: relative;
   z-index: 2;
+
   
-  
+}
+
+#res{
+  font-family: 'Darker Grotesque', sans-serif;
+  background-color:#fac92c;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 20px;
 }
 
 body{
@@ -75,16 +86,13 @@ body{
 
 
 .movieOptions{
-   
   background-color: black;
   text-align: center;
-  color: white;
+  color: black;
   margin: auto;
   width: 50%;
   padding: 10px;
   font-family: 'Anton', sans-serif;
-  
-  
 }
 
 /* johns adds */
@@ -113,7 +121,9 @@ body{
   color: white;
 }
 
-
+#pushfooter {
+  min-height:90vh;
+}
 
 h1{
   text-align: center;
@@ -126,6 +136,8 @@ body {margin: 0;}
 
 @media screen and (max-width: 600px) {
 
+
 }
+
 
 
