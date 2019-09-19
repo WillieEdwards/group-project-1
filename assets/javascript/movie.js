@@ -59,7 +59,9 @@ function displayMovieOptions(category) {
 
 function getMovieOptions() {
 
-    var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=" + query + "&api_key=d85d81953c9f6c3511e419e5fbfad6f4";
+    // https://api.themoviedb.org/3/movie/550?api_key=d85d81953c9f6c3511e419e5fbfad6f4
+
+    var queryURL = "https://api.themoviedb.org/3/discover/movie?with_genres=" + query + "&api_key=d85d81953c9f6c3511e419e5fbfad6f4&limit=10";
 
     // console.log("url", queryURL);
 
@@ -67,14 +69,15 @@ function getMovieOptions() {
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function(movies) {
+        var response = movies.results.slice(0, 10);
         $('.movieOptions').empty();
         console.log('ajax response', response);
-        for (let i = 0; i < response.results.length; i++) {
+        for (let i = 0; i < response.length; i++) {
             var type
-            var title = response.results[i].title;
+            var title = response[i].title;
 
-            switch (response.results[i].genre_ids[0]) {
+            switch (response[i].genre_ids[0]) {
                 case 28:
                     type = "Action"
                         // code block
@@ -152,10 +155,18 @@ function getMovieOptions() {
 
             }
             console.log("type", type);
-            // console.log('array', resultsTitleArray)
 
-            var rating = response.results[0].vote_average;
-            var imgURL = response.results[0].poster_path;
+            var rating = response[i].vote_average;
+
+            if (response[i].poster_path) {
+                var imgURL = "https://image.tmdb.org/t/p/w185_and_h278_bestv2" + response[i].poster_path;
+            } else {
+                var imgURL = "https://picsum.photos/185/278/?blur"
+            }
+
+            //if statement for placeholder 'not available'
+
+            var overview = response[i].overview.slice(0, 145) + "...";
 
             var videoCard = $(`<div class="col s12 m7">
             <div class="card horizontal">
@@ -164,9 +175,10 @@ function getMovieOptions() {
               </div>
               <div class="card-stacked">
                 <div class="card-content">
-                  <p>Titile: ${title}</p>
-                  <p>Rating: ${rating}</p>
-                  <p>Genre: ${type}</p>
+                  <h6>Titile: ${title}</h6>
+                  <h6>Rating: ${rating}</h6>
+                  <h6>Genre: ${type}</h6>
+                  <h6>Overview: ${overview}</h6>
                 </div>
                 <div class="card-action">
                   <a href="#" class="grabMovieTrailer" value="${title}">Watch Movie Trailer</a>
@@ -175,99 +187,12 @@ function getMovieOptions() {
               </div>
             </div>`);
 
-            // videoCard.attr('class', 'col s12 m7');
-
-            // poster
-
-            // console.log(title);
-
-            // var movieTitleDiv = $("<h5>").attr('class', 'header').text("Title: " + title);
-
-            // videoCard.append(movieTitleDiv);
-
-            // rating
-
-
-
-            // console.log(rating);
-
-            // var pTwo = $("<p>").text("Vote Average: " + rating + "/10");
-
-            // videoCard.append(pTwo);
-
-            // genre
-
-            // var genre = response.results[0].genre_ids;
-
-            // console.log(genre);
-
-            // var pThree = $("<p>").text("Genre: " + genre);
-
-            // videoCard.append(pThree);
-
-
-
-            // console.log(imgURL);
-
-            // var image = $("<img>").attr("src", imgURL);
-
-            // videoCard.append(image);
-
-            // var movieOptionsDiv = $('.movieOptions')
-            // console.log('movieOptionsDiv', movieOptionsDiv)
-
-            // movieOptionsDiv.append(videoCard)
-            // movieDiv.append(image);
-            // renderCard();
-            // youtube trailer
-
-            // movie title array for youtube
-
-            // create cards that click handler will get attached too
-
-            //     <div class="col s12 m7">
-            //     <h2 class="header">Horizontal Card</h2>
-            //     <div class="card horizontal">
-            //       <div class="card-image">
-            //         <img src="https://lorempixel.com/100/190/nature/6">
-            //       </div>
-            //       <div class="card-stacked">
-            //         <div class="card-content">
-            //           <p>I am a very simple card. I am good at containing small bits of information.</p>
-            //         </div>
-            //         <div class="card-action">
-            //           <a href="#">This is a link</a>
-            //         </div>
-            //       </div>
-            //     </div>
-            //   </div>
-
-            // function renderCard() {
-
-            // for (let i = 0; i < resultsTitleArray.length; i++) {
-            // console.log("loop trigger")
-
-            // movieTitleDiv.text(pOne);
-
-            // videoCard.append(movieTitleDiv);
-
-            // pTwo.text(videoCard);
-            // pThree.text(videoCard);
             console.log(videoCard)
             console.log($(".movieOptions"))
             $(".movieOptions").prepend(videoCard);
             $(".movieOptions").show();
-            // }
-            // }
+
         }
 
     })
 }
-
-
-// resultsTitleArray();
-
-// displayMovieOptions();
-
-
-// https://api.themoviedb.org/3/movie/550?api_key=d85d81953c9f6c3511e419e5fbfad6f4
