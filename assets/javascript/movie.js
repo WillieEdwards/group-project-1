@@ -169,7 +169,7 @@ function getMovieOptions() {
                   <p>Genre: ${type}</p>
                 </div>
                 <div class="card-action">
-                  <a href="#" class="grabMovieTrailer">Watch Movie Trailer</a>
+                  <a href="#" class="grabMovieTrailer" value="${title}">Watch Movie Trailer</a>
                 </div>
               </div>
               </div>
