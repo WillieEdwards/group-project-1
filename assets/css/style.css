@@ -1,0 +1,146 @@
+
+
+
+
+.nav-wrapper{
+  font-family: 'Anton', sans-serif;
+  background-color: black;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+
+ 
+#start,#suggest{
+  font-family: 'Darker Grotesque', sans-serif;
+  background-color:#fac92c;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 20px;
+  box-shadow: 3px 4px 5px black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -99px;
+  position: relative;
+  z-index: 2;
+
+  
+}
+
+#res{
+  font-family: 'Darker Grotesque', sans-serif;
+  background-color:#fac92c;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 24px;
+  border-radius: 20px;
+}
+
+body{
+  background-color: black;
+  
+}
+
+.result {
+  display: none;
+}
+
+
+
+#h1{
+  font-family: 'Anton', sans-serif;
+  text-shadow: 5px 6px 7px #000000;
+  color: #fac92c;
+  display: block;
+  margin-left: -55px;
+  margin-right: auto;
+  margin-top: -72px;
+  
+}
+
+
+.personalityTest{
+  
+  background-color: black;
+  text-align: center;
+  color: white;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-family: 'Anton', sans-serif;
+  
+}
+
+
+
+.movieOptions{
+  background-color: black;
+  text-align: center;
+  color: black;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-family: 'Anton', sans-serif;
+}
+
+/* johns adds */
+
+.mainContent {
+  position: relative;
+  overflow: hidden;
+}
+.mainContent h1 {
+  padding: 200px;
+  position: relative;
+  z-index: 2;
+} 
+.mainContent img {
+  position: absolute;
+  left: 290px;
+  top: 5px;
+  width: 59%;
+  height: auto;
+  opacity: 0.7;
+}
+
+#footer{
+  text-align: left;
+  font-family: 'Anton', sans-serif;
+  color: white;
+}
+
+#pushfooter {
+  min-height:90vh;
+}
+
+h1{
+  text-align: center;
+}
+
+body {margin: 0;}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+
+}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 239e7642c0c94c15936226d63228fa2249f9db99
